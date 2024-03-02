@@ -1,26 +1,6 @@
+package com.learning.core.day1.d01p01;
 
-class Book {
-     String book_title;
-     double book_price;
-
-    public String getTitle() {
-        return book_title;
-    }
-
-    public void setTitle(String title) {
-         book_title = title;
-    }
-
-    public double getPrice() {
-        return book_price;
-    }
-
-    public void setPrice(double price) {
-        book_price = price;
-    }
-}
-public class Main
-{
+public class Main {
 	public static void main(String[] args) {
         String book_title = "Java Programming";
         double book_price = 350.00;
