@@ -1,4 +1,4 @@
-package com.learning.core.day4.D04P03;
+package com.learning.core.day4.D04P01;
 
 
 class Applicant {

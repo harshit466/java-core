@@ -1,8 +1,8 @@
-package com.learning.core.day4.D04P02;
+package com.learning.core.day4.D04P01;
 
 import java.util.Scanner;
 
-public class test1 {
+public class D04P02 {
 	
 	    public static void main(String[] args) {
 	        Scanner scanner = new Scanner(System.in);
