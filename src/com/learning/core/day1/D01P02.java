@@ -1,6 +1,6 @@
 package com.learning.core.day1.D01P02;
 
-public class TestClass {
+public class D01P02 {
     public static void main(String[] args) {
         // Declare Medicine instances
         MedicineInfo tablet = new Tablet();

@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Test {
+public class D05P01 {
     public static void main(String[] args) {
         Register<Employee> employeeRegister = new Register<>("ASK3EWZ");
         Employee employee = new Employee("Arun", 9123456780L, "1101 LA788330G", 12345);

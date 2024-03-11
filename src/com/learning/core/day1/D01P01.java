@@ -1,6 +1,6 @@
 package com.learning.core.day1.d01p01;
 
-public class Main {
+public class D01P01 {
 	public static void main(String[] args) {
         String book_title = "Java Programming";
         double book_price = 350.00;

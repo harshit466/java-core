@@ -16,7 +16,7 @@ public class D03P03 {
             sum += A[i];
         }
         A[15] = sum; 
-        double average = (double) sum/ 18;
+        double average = (double) sum/ 16;
         A[16] = (int) Math.round(average);
 
         // Identify the smallest value 

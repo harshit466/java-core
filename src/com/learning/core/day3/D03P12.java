@@ -7,7 +7,6 @@ public class D03P12 {
         Scanner sc=new Scanner(System.in);
         String input=sc.nextLine();
     	//String input = "Helloword";
-
         if (canSplitIntoFourDistinctStrings(input)) {
             System.out.println("Yes");
         } else {
