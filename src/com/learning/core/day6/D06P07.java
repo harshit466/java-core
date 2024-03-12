@@ -10,12 +10,17 @@ class Car implements Comparable<Car> {
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
-        return "Car{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return name + " " + price;
     }
 
     @Override
@@ -40,20 +45,15 @@ class Car implements Comparable<Car> {
 public class D06P07 {
     public static void main(String[] args) {
         TreeMap<Car, String> carMap = new TreeMap<>();
-        carMap.put(new Car("Toyota", 25000), "Toyota");
-        carMap.put(new Car("Honda", 30000), "Honda");
-        carMap.put(new Car("Ford", 20000), "Ford");
-        carMap.put(new Car("Chevrolet", 18000), "Chevrolet");
+        carMap.put(new Car("Bugatti", 80050.0), "Bugatti");
+        carMap.put(new Car("Swift", 305000.0), "Swift");
+        carMap.put(new Car("Audi", 600100.0), "Audi");
+        carMap.put(new Car("Benz", 900000.0), "Benz");
 
-        System.out.println("Car details in TreeMap: ");
-        for (Map.Entry<Car, String> entry : carMap.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
-        }
+        Map.Entry<Car, String> leastEntry = carMap.firstEntry();
+        Map.Entry<Car, String> greatestEntry = carMap.lastEntry();
 
-        System.out.println("\nThe key-value mapping associated with the greatest price: ");
-        System.out.println(carMap.lastEntry());
-
-        System.out.println("\nThe key-value mapping associated with the least price: ");
-        System.out.println(carMap.firstEntry());
+        System.out.println(leastEntry.getKey());
+        System.out.println(greatestEntry.getKey());
     }
 }

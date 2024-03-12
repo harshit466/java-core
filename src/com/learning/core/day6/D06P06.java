@@ -1,5 +1,5 @@
 package com.learning.core.day6;
-
+package com.learning.core.day6;
 import java.util.*;
 
 class Car implements Comparable<Car> {
@@ -9,6 +9,14 @@ class Car implements Comparable<Car> {
     public Car(String name, double price) {
         this.name = name;
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     @Override
@@ -30,24 +38,21 @@ class Car implements Comparable<Car> {
     }
 
     @Override
-    public int compareTo(Car otherCar) {
-        return Double.compare(price, otherCar.price);
+    public int compareTo(Car o) {
+        return Double.compare(o.price, this.price);
     }
 }
 
-public class D06P06 {
+public class D06P05 {
     public static void main(String[] args) {
-        Map<Car, Double> carMap = new TreeMap<>();
-        carMap.put(new Car("Bugatti", 80050.0), 80050.0);
-        carMap.put(new Car("Swift", 305000.0), 305000.0);
-        carMap.put(new Car("Audi", 600100.0), 600100.0);
-        carMap.put(new Car("Benz", 900000.0), 900000.0);
+        TreeMap<Car, String> carMap = new TreeMap<>(Collections.reverseOrder());
+        carMap.put(new Car("Bugatti", 80050.0), "Bugatti");
+        carMap.put(new Car("Swift", 305000.0), "Swift");
+        carMap.put(new Car("Audi", 600100.0), "Audi");
+        carMap.put(new Car("Benz", 900000.0), "Benz");
 
-        List<Car> carsList = new ArrayList<>(carMap.keySet());
-        Collections.reverse(carsList);
-
-        for (Car car : carsList) {
-            System.out.println(car);
+        for (Map.Entry<Car, String> entry : carMap.entrySet()) {
+            System.out.println(entry.getKey());
         }
     }
 }

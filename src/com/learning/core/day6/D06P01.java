@@ -6,7 +6,6 @@ public class D06P01 {
     public static void main(String[] args) {
   
         Map<String, String> phoneBook = new HashMap<>();
-
         phoneBook.put("Amal", "998787823");
         phoneBook.put("Manvitha", "937843978");
         phoneBook.put("Joseph", "7882221113");

@@ -10,6 +10,14 @@ class Car implements Comparable<Car> {
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return name + " " + price;
@@ -29,21 +37,21 @@ class Car implements Comparable<Car> {
     }
 
     @Override
-    public int compareTo(Car otherCar) {
-        return this.name.compareTo(otherCar.name);
+    public int compareTo(Car o) {
+        return Double.compare(this.price, o.price);
     }
 }
 
 public class D06P05 {
     public static void main(String[] args) {
-        Map<Car, Double> carMap = new TreeMap<>();
-        carMap.put(new Car("Bugatti", 80050.0), 80050.0);
-        carMap.put(new Car("Swift", 305000.0), 305000.0);
-        carMap.put(new Car("Audi", 600100.0), 600100.0);
-        carMap.put(new Car("Benz", 900000.0), 900000.0);
+        TreeMap<Car, String> carMap = new TreeMap<>();
+        carMap.put(new Car("Bugatti", 80050.0), "Bugatti");
+        carMap.put(new Car("Swift", 305000.0), "Swift");
+        carMap.put(new Car("Audi", 600100.0), "Audi");
+        carMap.put(new Car("Benz", 900000.0), "Benz");
 
-        for (Car car : carMap.keySet()) {
-            System.out.println(car);
+        for (Map.Entry<Car, String> entry : carMap.entrySet()) {
+            System.out.println(entry.getKey());
         }
     }
 }
